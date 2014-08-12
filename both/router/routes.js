@@ -14,8 +14,8 @@ Router.map(function() {
     this.route('Settings', {path: '/settings'});
 
     this.route('Posts', { path: '/posts'});
-    this.route('PostsNew', { path: '/post/new'});
+    this.route('PostsNew', { path: '/posts/new'});
     this.route('PostsShow', { path: '/posts/:_idOrSlug'});
-    this.route('PostsUpdate', { path: '/posts/:_id/edit'});
+    this.route('PostsUpdate', { path: '/posts/:_idOrSlug/edit'});
 
 });
