@@ -1,0 +1,67 @@
+
+.login-wrapper {
+    margin-top: 8em;
+}
+
+
+// Login / Sign up overlay
+// --------------------------------------------------
+
+.overlay {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: $overlay-color;
+}
+
+/* Overlay closing cross */
+.overlay .overlay-close {
+    width: 80px;
+    height: 80px;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    overflow: hidden;
+    border: none;
+    background: url(/images/cross.png) no-repeat center center;
+    text-indent: 200%;
+    color: transparent;
+    outline: none;
+    z-index: 100;
+}
+
+// .signup-hide {
+//     display: none;
+// }
+
+// Login wrapper
+.entry {
+    float: none;
+    margin: auto;
+    overflow: auto;
+    margin-top: 20px;
+    background: #fff;
+    border-radius: 2px;
+    padding: 35px 40px 40px 40px;
+    color: $text-color;
+}
+
+// Login header
+.entry h3 {
+    margin-top: 0;
+    margin-bottom: 30px;
+    font-size: 28px;
+    font-weight: 400;
+    text-align: center;
+}
+
+// Forgot password link
+#signIn > p:nth-child(3) {
+    margin: 25px 0 0 5px;
+
+    a {
+        color: $text-color;
+    }
+}
