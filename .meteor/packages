@@ -5,16 +5,12 @@
 
 standard-app-packages
 accounts-password
-iron-router
-iron-router-active
-iron-router-progress
-fast-render
-accounts-entry
-autoform
-roles
-scss
-bootstrap3-sass
-marked
-moment
-velocity-animate
-marka
+aldeed:simple-schema
+iron:router
+joshowens:accounts-entry
+aldeed:autoform
+chuangbo:marked
+zimme:iron-router-active
+mrt:moment
+fourseven:scss
+
