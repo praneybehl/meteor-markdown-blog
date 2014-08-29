@@ -2,7 +2,7 @@ Settings = new Meteor.Collection("settings", {
     schema: new SimpleSchema({
         title: {
             type: String,
-            label: "Title",
+            label: "Site Title",
             optional: true
         },
         tagline: {
@@ -17,10 +17,12 @@ Settings = new Meteor.Collection("settings", {
         },
         segmentIOId: {
             type: String,
+            label: "Segment.io ID",
             optional: true
         },
         footerCode: {
             type: String,
+            label: "Footer Code",
             optional: true
         }
     })
