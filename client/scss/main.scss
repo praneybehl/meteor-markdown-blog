@@ -1,8 +1,19 @@
-@import "settings",
+@import "compass",
+        "modules/normalize",
+        "susy",
+        "breakpoint",
 
-        "../../packages/bootstrap3-sass/bootstrap",
+        "settings",
 
-        "modules/loading",
-
+        "partials/global",
         "partials/login",
-        "partials/admin";
+        "partials/admin",
+        "partials/settings",
+        "partials/nav",
+
+        "modules/layout",
+        "modules/type",
+        "modules/tables",
+        "modules/utils",
+        "modules/loading";
+
