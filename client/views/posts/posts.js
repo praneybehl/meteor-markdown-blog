@@ -1,30 +1,34 @@
-/*****************************************************************************/
-/* Posts: Event Handlers and Helpers */
-/*****************************************************************************/
-// Template.Posts.events({
+// Post Item Templates
 
-//     'click .selector': function (e, tmpl) {
-//         // Do stuff
-//     }
+Template.Posts.helpers({
 
-// });
+    posts: function() {
+        return Posts.find({}, {
+            sort: {
+                createdAt: -1
+            }
+        });
+    }
 
-// Template.Posts.helpers({
+});
 
-//     items: function () {
-//         return Items.find();
-//     }
 
-// });
+Template.Posts.rendered = function () {
+    $('body').addClass('manage');  // required for Ghost layout styles to work properly
+};
 
-/*****************************************************************************/
-/* Posts: Lifecycle Hooks */
-/*****************************************************************************/
-// Template.Posts.created = function () {
-// };
+// Post Item Templates
 
-// Template.Posts.rendered = function () {
-// };
+Template.PostItem.helpers({
+    isSelected: function () {
+        var path = Router._currentController.path;
+        var i = path.lastIndexOf('/');
+        var routeId = path.substring(i + 1);
 
-// Template.Posts.destroyed = function () {
-// };
+        if (routeId === this._id) {
+            return "active";
+        } else {
+            return "";
+        }
+    }
+});

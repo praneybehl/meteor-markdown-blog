@@ -1,7 +1,11 @@
 <template name="AdminLayout">
 
-    <div class="admin-wrapper">
+    {{#unless hideNav}}
+        {{> AdminNav}}
+    {{/unless}}
+
+    <main role="main" id="main">
         {{> yield}}
-    </div>
+    </main>
 
 </template>

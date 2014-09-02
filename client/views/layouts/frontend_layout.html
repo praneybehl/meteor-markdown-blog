@@ -1,11 +1,16 @@
 <template name="FrontendLayout">
 
-    <div class="front-wrapper">
+    <div class="front-wrap">
+        {{> FrontendNav}}
+        <aside>
+            Side content
+        </aside>
         <div class="front-content">
             {{> yield}}
         </div>
+
     </div>
 
-    {{initFoundation}}
+    <!-- {{initFoundation}} -->
 
 </template>

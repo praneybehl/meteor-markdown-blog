@@ -1,0 +1,22 @@
+<template name="PublishBar">
+
+    <footer id="publish-bar">
+        <nav>
+            {{> PostTagsInput}}
+
+            <div class="right">
+                <section id="entry-controls" class="unsaved">
+                    <button class="post-settings post-settings-popup"><!-- TODO: isOpen -->
+                        <span class="hidden">Post Settings</span>
+                    </button>
+                    <div class="ghost-popover fade-in post-settings-menu menu-right post-settings-popup"><!-- TODO: isOpen -->
+                        {{> PostSettingsMenu}}
+                    </div>
+                </section>
+
+                {{> EditorSaveButton}}
+            </div>
+        </nav>
+    </footer>
+
+</template>

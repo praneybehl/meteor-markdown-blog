@@ -1,3 +1,48 @@
 <template name="Posts">
-  client/views/posts/posts.html
+    <section class="content-view-container">
+        <section class="content-list js-content-list">
+            <header class="floatingheader">
+                <section class="content-filter">
+                    <small>All Posts</small>
+                </section>
+                <a class="button button-add" title="New Post" href="{{pathFor 'Write'}}">
+                    <span class="hidden">New Post</span>
+                </a>
+            </header>
+            <section class="content-list-content">
+                <ol class="posts-list">
+                    {{#each posts}}
+                        {{> PostItem}}
+                    {{/each}}
+                </ol>
+            </section>
+        </section>
+        <section class="content-preview js-content-preview">
+            Mardown output goes here
+        </section>
+    </section>
+</template>
+
+
+<template name="PostItem">
+    <li id="{{_id}}" class="{{isSelected}}">
+        <a class="permalink" title="Edit this post" href="{{pathFor 'Posts' params=this}}">
+            <h3 class="entry-title">{{title}}</h3>
+            <section class="entry-meta">
+                <span class="status">
+                    {{#if isPublished}}
+                        {{#if isPage}}
+                        <span class="page">Page</span>
+                        {{else}}
+                        <time datetime="{{publishedAt}}" class="date published">
+                            Published at {{publishedAt}}
+                        </time>
+                        {{/if}}
+                    {{else}}
+                    <span class="draft">Draft</span>
+                    {{/if}}
+                </span>
+            </section>
+        </a>
+    </li>
 </template>
