@@ -2,9 +2,17 @@
 /* Client and Server Routes */
 /*****************************************************************************/
 Router.configure({
-    layoutTemplate: 'FrontendLayout',
+    layoutTemplate: 'AdminLayout',
     loadingTemplate: 'Loading',
-    notFoundTemplate: 'NotFound'
+    notFoundTemplate: 'NotFound',
+
+    waitOn: function () {
+        return [
+            Meteor.subscribe('settings'),
+            Meteor.subscribe('user-profile'),
+            Meteor.subscribe('posts')
+        ]
+    },
 });
 
 
