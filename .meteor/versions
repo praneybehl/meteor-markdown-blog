@@ -58,6 +58,9 @@ spacebars@1.0.0
 srp@1.0.0
 standard-app-packages@1.0.0
 templating@1.0.4
+tmeasday:crypto-base@3.1.2
+tmeasday:crypto-md5@3.1.2
+tmeasday:gravatar@0.0.4
 ui@1.0.0
 underscore@1.0.0
 webapp@1.0.2
