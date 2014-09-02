@@ -6,26 +6,7 @@
                 <input id="entry-title" class="" placeholder="Your Post Title" tabindex="1" type="text">
             </section>
         </header>
-
-        <section class="entry-markdown active">
-            <header class="floatingheader" id="entry-markdown-header">
-                <small>Markdown</small>
-                <a class="markdown-help" href="#"><span class="hidden">What is Markdown?</span></a>
-            </header>
-            <section id="entry-markdown-content" class="entry-markdown-content">
-                <textarea id="entry-markdown">Markdown content here</textarea>
-            </section>
-        </section>
-
-        <section class="entry-preview">
-            <header class="floatingheader" id="entry-preview-header">
-                <small>Preview <span class="entry-word-count js-entry-word-count">Word count here</span></small>
-            </header>
-            <section class="entry-preview-content">
-                <div class="rendered-markdown"></div>
-            </section>
-        </section>
-
+        {{> GhostEditor}}
         {{> PublishBar}}
     </section>
 
