@@ -1,5 +1,6 @@
 require 'susy'
 require 'breakpoint'
+require 'bourbon'
 require 'compass-notify'
 
 css_dir = "../css"
