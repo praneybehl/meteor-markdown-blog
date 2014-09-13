@@ -13,17 +13,27 @@ Router.configure({
             Meteor.subscribe('posts')
         ]
     },
+    data: function() {
+        return {
+            user: Meteor.user(),
+            latestPostId: function() {
+                var post = Posts.find({},{sort: { createdAt: -1 }, limit: 1}).fetch();
+                var id = _.pluck(post, '_id');
+                return id;
+        }
+    },
 });
 
 
 Router.map(function() {
 
-    this.route('Home', { path: '/'});
-    this.route('Settings', {path: '/settings'});
+    this.route('Home', { path: '/' });
+    this.route('Settings', { path: '/settings' });
 
-    this.route('Posts', { path: '/posts'});
-    this.route('PostsNew', { path: '/posts/new'});
-    this.route('PostsShow', { path: '/posts/:_idOrSlug'});
-    this.route('PostsUpdate', { path: '/posts/:_idOrSlug/edit'});
+    this.route('Posts', { path: '/posts/:_id' });
+    this.route('PostsNew', { path: '/write' });
+    this.route('PostsShow', { path: '/writing/:slug' });
+    this.route('PostsEdit', { path: '/posts/:_id/edit' });
+
 
 });
