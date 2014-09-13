@@ -28,7 +28,7 @@ iron:core@0.3.4
 iron:dynamic-template@0.4.1
 iron:layout@0.4.1
 iron:router@0.9.3
-jeremy:ghostdown@0.2.1
+jeremy:ghostdown@0.3.1
 joshowens:accounts-entry@0.9.0
 joshowens:simple-form@0.1.8
 jquery@1.0.0
