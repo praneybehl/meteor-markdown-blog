@@ -21,7 +21,25 @@ Router.configure({
                 var id = _.pluck(post, '_id');
                 return id;
         }
-    },
+    }
+});
+
+
+var mustBeSignedIn = function() {
+    if (!Meteor.user() && !Meteor.loggingIn()) {
+        Router.go('entrySignIn');
+    }
+};
+
+Router.onBeforeAction(mustBeSignedIn, {
+    except: [
+        'entrySignIn',
+        'entrySignUp',
+        'entryForgotPassword',
+        'entryResetPassword',
+        'Loading',
+        'apiRoute'
+    ]
 });
 
 
