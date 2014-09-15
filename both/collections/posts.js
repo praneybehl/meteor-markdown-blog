@@ -10,8 +10,7 @@ Posts = new Meteor.Collection("posts", {
             label: "Slug",
             autoValue: function() {
                 var title = this.field("title").value;
-                var slug = slugify(title);
-                return slug;
+                return slugify(title);
             },
             optional: true
         },
@@ -22,6 +21,13 @@ Posts = new Meteor.Collection("posts", {
         },
         html: {
             type: String,
+            autoValue: function() {
+                return marked(this.field("markdown").value);
+            },
+            optional: true
+        },
+        wordCount: {
+            type: Number,
             optional: true
         },
         image: {
@@ -56,7 +62,7 @@ Posts = new Meteor.Collection("posts", {
             autoValue: function() {
                 return this.userId
             },
-            optional: false
+            optional: true
         },
         createdAt: {
             type: Date,
