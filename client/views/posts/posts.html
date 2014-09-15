@@ -5,7 +5,7 @@
                 <section class="content-filter">
                     <small>All Posts</small>
                 </section>
-                <a class="button button-add" title="New Post" href="{{pathFor 'Write'}}">
+                <a class="button button-add" title="New Post" href="{{pathFor 'PostsNew'}}">
                     <span class="hidden">New Post</span>
                 </a>
             </header>
@@ -18,7 +18,7 @@
             </section>
         </section>
         <section class="content-preview js-content-preview">
-            Mardown output goes here
+            {{> PostPreview}}
         </section>
     </section>
 </template>
