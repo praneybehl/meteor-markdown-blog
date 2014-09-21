@@ -22,8 +22,3 @@ Template.PostsNew.events({
         }
     }
 });
-
-
-Template.PostsNew.rendered = function () {
-
-};
