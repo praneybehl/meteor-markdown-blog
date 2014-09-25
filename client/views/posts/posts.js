@@ -17,9 +17,7 @@ Template.Posts.rendered = function () {
 
 Template.PostItem.helpers({
     isSelected: function () {
-        var path = Router._currentController.path,
-            i = path.lastIndexOf('/'),
-            routeId = path.substring(i + 1);
+        var routeId = Router.current().params._id;
 
         if (routeId === this._id) {
             return "active";
