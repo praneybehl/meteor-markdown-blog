@@ -35,3 +35,12 @@ UI.registerHelper('displayName', function() {
 UI.registerHelper('gravatar', function() {
     return Gravatar.imageUrl(getCurrentUserEmail());
 });
+
+
+/**
+ *  Date Helpers
+ */
+
+UI.registerHelper('dateFormatted', function(date) {
+    return moment(date).format("ddd, MMM Do YYYY, h:mma");
+});
