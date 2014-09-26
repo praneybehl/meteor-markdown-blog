@@ -10,13 +10,13 @@
         <nav id="global-nav" role="navigation">
             <ul id="main-menu" >
                 <li title="Content" class="content js-close-sidebar {{isActiveRoute 'Posts'}}">
-                    <a class="{{isActiveRoute 'Posts'}}" href="{{pathFor 'Posts' _id=latestPostId}}">Content</a>
+                    <a href="{{pathFor 'Posts' _id=latestPostId}}">Content</a>
                 </li>
                 <li title="New Post" class="editor js-close-sidebar {{isActiveRoute 'PostsNew'}}">
-                    <a class="{{isActiveRoute 'PostsNew'}}" href="{{pathFor 'PostsNew'}}">New Post</a>
+                    <a href="{{pathFor 'PostsNew'}}">New Post</a>
                 </li>
                 <li title="Settings" class="settings js-close-sidebar {{isActiveRoute 'Settings'}}">
-                    <a class="{{isActiveRoute 'Settings'}}" href="{{pathFor 'Settings'}}">Settings</a>
+                    <a href="{{pathFor 'Settings'}}">Settings</a>
                 </li>
 
                 {{#with user}}
